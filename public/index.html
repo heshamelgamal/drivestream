@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#141414">
+  <title>DriveStream</title>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="fonts/BebasNeue-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav" id="nav">
+    <a class="logo" href="#/" aria-label="DriveStream home">
+      <img class="logo-full" src="brand/logo.svg" alt="DriveStream">
+      <img class="logo-mark" src="brand/icon-d.svg" alt="DriveStream">
+    </a>
+    <nav class="nav-links" id="nav-links"></nav>
+    <label class="nav-search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12z"/></svg>
+      <input id="search" type="search" placeholder="Titles, genres, years" autocomplete="off" aria-label="Search">
+    </label>
+    <div class="nav-profile" id="nav-profile"></div>
+  </header>
+
+  <main id="view" tabindex="-1"></main>
+
+  <!-- The site needs Chrome 88-level JS and CSS (?. ??, aspect-ratio, inset, flex gap).
+       Older browsers, e.g. Samsung TVs up to 2021 (Tizen 6 = Chrome 76), run the old-TV build
+       instead. Module support alone isn't enough to tell them apart. -->
+  <script>
+    (function () {
+      var modern = 'noModule' in document.createElement('script');
+      try { new Function('a', 'return a?.b ?? 1'); } catch (e) { modern = false; }
+      if (!window.CSS || !CSS.supports || !CSS.supports('aspect-ratio', '1 / 1')) modern = false;
+      var s = document.createElement('script');
+      if (modern) s.type = 'module';
+      s.src = modern ? 'app.js' : 'tv/app.js';
+      document.body.appendChild(s);
+    })();
+  </script>
+</body>
+</html>

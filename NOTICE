@@ -1,0 +1,14 @@
+DriveStream
+Copyright (c) 2026 Hesham Elgamal
+
+Developed by Hesham Elgamal.
+
+This credit must stay visible in every running copy of DriveStream (LICENSE §3):
+  - website:      credit() in public/ui.js, shown in the home page footer (public/app.js)
+  - Android app:  <Credit /> in app/src/components/ui.tsx, shown on the home and sign-in screens
+
+`npm run check` (tools/check-credit.mjs) verifies it, and the server prints a warning at
+startup when it has been removed. Code can't stop anyone from editing it out; the license
+is what protects the credit.
+
+Personal, non-commercial use only. See LICENSE.

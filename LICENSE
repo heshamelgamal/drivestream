@@ -1,0 +1,44 @@
+DriveStream Personal Use License
+Version 1.0
+
+Copyright (c) 2026 Hesham Elgamal. All rights reserved except as granted below.
+
+"The Software" means DriveStream: the source code, website, Android and Samsung TV
+apps, and the DriveStream name, logo, intro clip and other branding in this repository.
+
+1. Personal use. You may download, install, run and modify the Software for your own
+   personal, non-commercial use, including sharing your own server with members of your
+   household and friends, free of charge.
+
+2. Modifications. You may change the Software for your own use. Modified copies remain
+   under this license.
+
+3. Credit. Every running copy of the Software, modified or not, must keep the visible
+   "Developed by Hesham Elgamal" credit where the Software shows it (the website footer
+   and the app screens), readable and unobscured. You may not remove, hide or alter
+   this credit or the copyright notices in the source.
+
+4. No commercial use. You may not sell the Software or any copy or modification of it;
+   offer it, or a service built on it, to others for payment or other commercial benefit;
+   host it as a service for people outside your household and friends; or use it in or
+   for a business. Any other use needs written permission from the copyright holder.
+
+5. Redistribution. You may share copies of the Software, modified or not, only free of
+   charge, in source form, with this license file, the NOTICE file and the credit in
+   section 3 intact. Recipients get this same license and nothing more.
+
+6. Your content. The Software is for streaming media you have the right to use. You are
+   solely responsible for the content you stream and for following the terms of any
+   service you connect it to (such as Google Drive and TMDB).
+
+7. Third-party parts. Components by others (libraries, fonts) keep their own licenses;
+   see THIRD_PARTY_NOTICES.md. This license does not cover them.
+
+8. Ending. If you break these terms, your rights under this license end automatically.
+
+9. No warranty. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+   AND NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR
+   OTHER LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR ITS USE.
+
+This is a source-available license, not an open-source license.

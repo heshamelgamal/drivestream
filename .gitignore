@@ -1,0 +1,21 @@
+node_modules/
+.env
+data/
+media/
+downloads/
+service-account.json
+*.key
+*.key.json
+*.jks
+*.p12
+*.pem
+cast.key
+tizen/build/
+tizen/dist/
+tizen/tizen.config.json
+*.wgt
+app/keys/
+app/dist-local/
+
+# Thmanyah Sans may not be redistributed: download it yourself (README → Fonts)
+ThmanyahSans-*.otf

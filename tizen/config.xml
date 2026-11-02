@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets"
+        id="__WIDGET_ID__" version="1.0.0" viewmodes="maximized">
+    <tizen:application id="__TIZEN_PACKAGE_ID__.DriveStream" package="__TIZEN_PACKAGE_ID__" required_version="3.0"/>
+    <name>DriveStream</name>
+    <description>Your personal streaming library.</description>
+    <author>Hesham Elgamal</author>
+    <icon src="icon.png"/>
+    <content src="index.html"/>
+    <feature name="http://tizen.org/feature/screen.size.normal.1080.1920"/>
+
+    <!-- The app opens the DriveStream website on your server. The __PLACEHOLDERS__ are
+         filled in by tools/build-tizen.mjs from tizen/tizen.config.json. -->
+    <access origin="*" subdomains="true"/>
+    <tizen:allow-navigation>__SERVER_HOST__</tizen:allow-navigation>
+
+    <tizen:privilege name="http://tizen.org/privilege/internet"/>
+    <tizen:privilege name="http://tizen.org/privilege/tv.inputdevice"/>
+    <tizen:privilege name="http://tizen.org/privilege/application.launch"/>
+    <tizen:privilege name="http://tizen.org/privilege/filesystem.read"/>
+    <tizen:privilege name="http://tizen.org/privilege/filesystem.write"/>
+
+    <!-- Rows on the TV's home bar (Smart Hub Preview), set by a background service.
+         Picking a tile reopens the app with that title (see launcher.js). -->
+    <tizen:metadata key="http://samsung.com/tv/metadata/use.preview" value="bg_service"/>
+    <tizen:service id="__TIZEN_PACKAGE_ID__.preview" auto-restart="false">
+        <tizen:content src="service/service.js"/>
+        <tizen:name>DriveStreamPreview</tizen:name>
+        <tizen:icon src="icon.png"/>
+        <tizen:description>Home bar rows</tizen:description>
+        <tizen:category name="http://tizen.org/category/service"/>
+    </tizen:service>
+    <tizen:app-control>
+        <tizen:src name="index.html" reload="enable"/>
+        <tizen:operation name="http://samsung.com/appcontrol/operation/eden_resume"/>
+    </tizen:app-control>
+
+    <tizen:profile name="tv-samsung"/>
+    <tizen:setting screen-orientation="landscape" context-menu="disable" background-support="disable"
+                   encryption="disable" install-location="auto" hwkey-event="enable"/>
+</widget>

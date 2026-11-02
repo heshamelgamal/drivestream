@@ -1,0 +1,13 @@
+.git
+node_modules
+data
+media
+downloads
+.env
+service-account.json
+*.key
+*.key.json
+app
+tizen
+branding
+docs

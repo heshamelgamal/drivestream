@@ -1,0 +1,26 @@
+# docker compose up -d     (then open http://<this machine>:8080)
+#
+# 1. cp .env.example .env and fill it in (STORAGE, CATEGORIES, TMDB_API_KEY, …).
+# 2. Google Drive: put service-account.json next to this file.
+#    Local folder:  set STORAGE=local and point the media volume below at your folder.
+services:
+  drivestream:
+    build: .
+    image: drivestream
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DATA_DIR: /data
+      GOOGLE_APPLICATION_CREDENTIALS: /run/secrets/service-account.json
+      LOCAL_MEDIA_DIR: /media
+    ports:
+      - "8080:8080"           # behind a reverse proxy on this machine: "127.0.0.1:8080:8080"
+    volumes:
+      - drivestream-data:/data
+      # Google Drive (STORAGE=drive). Remove this line with STORAGE=local.
+      - ./service-account.json:/run/secrets/service-account.json:ro
+      # Local folder (STORAGE=local): change ./media to your media folder. Read-only is fine.
+      - ./media:/media:ro
+
+volumes:
+  drivestream-data:
