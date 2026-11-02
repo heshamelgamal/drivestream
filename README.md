@@ -46,7 +46,7 @@ browser, on Android phones and Android TV (app), and on Samsung TVs (Tizen app o
 You need [Node.js](https://nodejs.org/) 22+ and, for conversion and intro detection, [ffmpeg](https://ffmpeg.org/).
 
 ```bash
-git clone https://github.com/<you>/drivestream.git
+git clone https://github.com/heshamelgamal/drivestream.git
 cd drivestream
 npm install
 cp .env.example .env      # then edit .env (see the next sections)
